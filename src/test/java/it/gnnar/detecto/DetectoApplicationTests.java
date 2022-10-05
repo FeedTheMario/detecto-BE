@@ -1,10 +1,11 @@
-package com.example.sqldemo;
+package it.gnnar.detecto
+		;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SqldemoApplicationTests {
+class DetectoApplicationTests {
 
 	@Test
 	void contextLoads() {
