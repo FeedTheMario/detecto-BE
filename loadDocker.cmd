@@ -1,0 +1,1 @@
+docker load --input detecto-backend.tar

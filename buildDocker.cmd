@@ -1,1 +1,2 @@
-./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=springio/gs-spring-boot-docker
+docker build -t detecto/backend .
+docker save -o detecto-backend.tar detecto/backend
