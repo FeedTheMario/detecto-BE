@@ -8,8 +8,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.detecto</groupId>
-	<artifactId>backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>detecto-backend</artifactId>
+	<version>0.0.1</version>
 	<name>detecto backend</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -71,6 +71,8 @@
 	</dependencies>
 
 	<build>
+		<finalName>detecto-backend</finalName>
+
 		<plugins>
 
 			<plugin>
@@ -78,6 +80,18 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<!-- Spring boot maven plugin to create executable JAR -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<mainClass>springboot.api.tutorial.TutorialApplication</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 
@@ -97,5 +111,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 
 </project>
