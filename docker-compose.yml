@@ -2,30 +2,12 @@
 version: '1'
 
 services:
-  #mysqldb:
-  #  container_name: mysqldb
-  #  image: mysql:latest
-  #  environment:
-  #    - MYSQL_ROOT_PASSWORD=P@ssw0rd
-  #    - MYSQL_DATABASE=spbapidb
-  #    - MYSQL_USER=user
-  #    - MYSQL_PASSWORD=password
-  #  restart: always
-  #  ports:
-  #    - 3306:3306
-  #  volumes:
-  #    - mysqldb:/var/lib/mysql
   api:
     container_name: api
     image: detecto-backend
     build:
       context: ./
       dockerfile: Dockerfile
-    #depends_on:
-    #  - mysqldb
     ports:
       - 8080:8080
     restart: always
-
-#volumes:
-#  mysqldb:
